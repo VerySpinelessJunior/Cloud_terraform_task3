@@ -1,0 +1,5 @@
+auth_url = "https://iam.ru-moscow-1.hc.sbercloud.ru/v3"
+region = "ru-moscow-1"
+access_key = "POWOUDBNCNEWPJKKRD9L"
+secret_key = "RllFnPA1MMHNuaTlkh9f8YzSLnE6Cqtbqike47Uy"
+root_passwd = "xxXX2233"
