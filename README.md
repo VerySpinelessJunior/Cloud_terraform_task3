@@ -1,7 +1,8 @@
 # Cloud_terraform_task3
-Cloud_terraform_task3
-
+# "Семь бед, один ответ - костыль и велосипед"
 Платформа для обучения языкам программирования, разворачивается с использованием terraform в облачном сервисе SberCloud
+
+
 # Requrements
 1. terraform
 2. Account cloud.advanced
