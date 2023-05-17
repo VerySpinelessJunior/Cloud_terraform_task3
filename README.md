@@ -3,6 +3,10 @@
 Платформа для обучения языкам программирования, разворачивается с использованием terraform в облачном сервисе SberCloud
 
 
+
+https://github.com/VerySpinelessJunior/Cloud_terraform_task3/assets/98365261/543acd51-3ba9-407c-b76e-f54e10eb7f11
+
+
 # Requrements
 1. terraform
 2. Account cloud.advanced
