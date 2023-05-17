@@ -1,0 +1,40 @@
+### Register new user
+POST http://localhost:8000/register
+Content-Type: application/json
+
+{
+    "username": "testuser125125125",
+    "email": "testuser125125125@example.com",
+    "password": "testuser125125125"
+}
+
+###
+
+
+### Login with existing user
+POST http://localhost:8000/token
+Content-Type: application/x-www-form-urlencoded
+
+username=testuser125125125&password=testuser125125125
+
+###
+
+
+### Get Tasks
+GET http://localhost:8000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjozLCJleHAiOjE2ODQzNjEzMjl9.ESSxmSRtzBLIzGMEt8IcGuXLgsHsAowPuisWAzeEVLQ
+
+
+### Complete a Task
+PUT http://localhost:8000/tasks/1/complete
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjozLCJleHAiOjE2ODQzNjEzMjl9.ESSxmSRtzBLIzGMEt8IcGuXLgsHsAowPuisWAzeEVLQ
+
+
+### To run a code
+POST http://localhost:8000/run_code
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxLCJleHAiOjE2ODQzNjI4NDl9.BYOfnNALJrX5Do6v302CrD1K4xoJsJ3Nc5AiyXLR4IY
+Content-Type: application/json
+
+{
+  "code": "print('Hello, World!')"
+}
