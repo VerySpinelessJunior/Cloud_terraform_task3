@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>IMPULSE V3</title>
+    <!-- Подключение стилей Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Подключение стилей Codemirror -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/theme/seti.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/theme/xq-light.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="brython.js"></script>
+	<script type="text/python3" src="check.py"></script>
+</head>
+
+
+<body>
+    <div class="container-fluid">
+		<div class="header">
+			<img src="logo.png" height="50px" width="50px" style="display: inline-block;">
+			<h1 style="display: inline-block; vertical-align: middle;">Impulse [3]</h1>
+		</div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="task-menu">
+					<div class="task-menu-item">
+						<a href="#" class="task-title" onclick="toggleTask(event)">Задание 1</a>
+						<div class="task-description">
+							<h3>Минимум из двух чисел</h3>
+							<p>Даны два целых числа. Выведите значение наименьшего из них.</p>
+						</div>
+					</div>
+					<div class="task-menu-item">
+						<a href="#" class="task-title" onclick="toggleTask(event)">Задание 2</a>
+						<div class="task-description">
+							<h3>Шахматная доска</h3>
+							<p>Заданы две клетки шахматной доски. Если они покрашены в один цвет, то выведите слово YES, а если в разные цвета — то NO. Программа получает на вход четыре числа от 1 до 8 каждое, задающие номер столбца и номер строки сначала для первой клетки, потом для второй клетки.</p>
+						</div>
+					</div>
+                    <!-- Добавьте больше заданий по мере необходимости -->
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="code-editor">
+                    <textarea id="code-editor"></textarea>
+                </div>
+				<button id="execute-tests" class="btn btn-primary">Проверить решение</button>
+                <button id="execute-button-front" class="btn btn-primary">Выполнить код</button>
+                <!-- <button id="execute-button-back" class="btn btn-primary">Выполнить код на сервере</button> -->
+                <div class="output">
+                    <h2>Результат выполнения:</h2>
+                    <div id="output">result</div>
+                </div>
+                    <table class="test-table">
+                        <thead>
+                            <tr>
+                                <th>Описание</th>
+                                <th>Вывод</th>
+                                <th>Тест</th>
+                            </tr>
+                        </thead>
+                        <tbody id="test-table-body">
+                            <!-- Результаты тестов будут добавляться сюда динамически -->
+                        </tbody>
+                    </table>				
+            </div>
+        </div>
+    </div>
+	<div class="theme-switcher">
+		<div class="custom-control custom-switch">
+			<input type="checkbox" class="custom-control-input" id="dark-mode-toggle">
+			<label class="custom-control-label" for="dark-mode-toggle">Темная тема</label>
+		</div>
+	</div>
+
+<!-- Подключение скриптов Bootstrap и Codemirror -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/python/python.min.js"></script>
+<script>$(function() { brython({debug: 1}); });</script>	
+<script src="main.js"></script>
+</body>
+</html>

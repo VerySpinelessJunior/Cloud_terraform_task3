@@ -1,0 +1,133 @@
+body {
+    /*padding-top: 20px;*/
+    /*margin-bottom: 80px;*/
+}
+
+.header {
+    background-color: #f8f9fa;
+    padding: 1em;
+    margin-bottom: 30px;
+    margin-top: 1em;
+}
+
+.task-menu {
+    background-color: #f8f9fa;
+    padding: 20px;
+    height: calc(100vh - 220px);
+    overflow-y: auto;
+}
+
+.task-menu-item {
+    margin-bottom: 10px;
+}
+
+.task-menu-item a {
+    color: #333;
+}
+
+.task-menu-item.active a {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.code-editor {
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.output {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Темная тема */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .header {
+    background-color: #222;
+}
+
+.dark-mode .task-menu {
+    background-color: #222;
+}
+
+.dark-mode .task-menu-item a {
+    color: #fff;
+}
+
+.dark-mode .task-menu-item.active a {
+    color: #007bff;
+}
+
+.dark-mode .code-editor {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode th {
+    color: #000;
+}
+
+.dark-mode .output {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .output h2 {
+    color: #fff;
+}
+
+.dark-mode .theme-switcher {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .theme-switcher .custom-control-label {
+    color: #fff;
+}
+
+.theme-switcher {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+}
+
+.test-table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.test-table th,
+.test-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.test-table th {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+.test-table td {
+    vertical-align: middle;
+}
+
+.task-description {
+    display: none; /* По умолчанию описание скрыто */
+    transition: all 0.2s ease-in-out;
+}
+
+.task-description.show {
+    display: block; /* Описание отображается, когда класс show применен */
+    transition: all 0.2s ease-in-out;
+}
+
+.test-button {
+    margin-top: 10px;
+}
