@@ -1,3 +1,5 @@
+#Указвываем провайдера и версию
+#Версия нужна для исключения отказа компонентов сисиетмы в случае обновления синтаксиса этих компонентов
 terraform {
   required_providers {
     sbercloud = {
@@ -14,6 +16,7 @@ provider "sbercloud" {
   secret_key = var.secret_key
 }
 
+#Блок объявления переменных
 variable "region" {
   description = "our region ru-moscow-1"
   type        = string
@@ -49,19 +52,19 @@ data "sbercloud_enterprise_project" "enterprise_project" {
 #Creating vpc_01 
 resource "sbercloud_vpc" "vpc_01" {
     name = "vpc_01"
-    cidr = "192.168.0.0/16"
+    cidr = "192.168.0.0/16" 
     enterprise_project_id = data.sbercloud_enterprise_project.enterprise_project.id
 }
 
 #Creating subnet_01
 resource "sbercloud_vpc_subnet" "subnet_01" {
     name = "subnet_01"
-    cidr = "192.168.10.0/24"
+    cidr = "192.168.10.0/24" 
 
     gateway_ip = "192.168.10.1"
     vpc_id = sbercloud_vpc.vpc_01.id
 
-    primary_dns = "100.125.13.59"
+    primary_dns = "100.125.13.59" #SberCloud рекомендует использовать этот DNS
     secondary_dns = "8.8.8.8"
 
     dhcp_enable = true
@@ -109,7 +112,7 @@ data "sbercloud_compute_flavors" "flavor_name" {
   memory_size       = 8
 }
 
-
+#Присваиваем EIP ip машинам ECS
 resource "sbercloud_compute_eip_associate" "associated_01" {
   public_ip   = sbercloud_vpc_eip.front_eip.address
   instance_id = sbercloud_compute_instance.nginx-front.id
@@ -132,7 +135,6 @@ resource "sbercloud_compute_instance" "docker-sandbox" {
   system_disk_type  = "SSD"
   system_disk_size  = 40
   admin_pass        = var.root_passwd
-#  user_data         = file("${path.module}/hello.txt")
   network {
     uuid = sbercloud_vpc_subnet.subnet_01.id
     fixed_ip_v4 = "192.168.10.50"
@@ -151,7 +153,6 @@ resource "sbercloud_compute_instance" "nginx-front" {
   system_disk_type  = "SSD"
   system_disk_size  = 40
   admin_pass        = var.root_passwd
-#  user_data         = var.nginx_deploy
   network {
     uuid = sbercloud_vpc_subnet.subnet_01.id
     fixed_ip_v4 = "192.168.10.100"
