@@ -5,6 +5,7 @@ Cloud_terraform_task3
 # Requrements
 1. terraform
 2. Account cloud.advanced
+3. open ssh
 
 # How to set up
 1. Установить тераформ по гайду из документации https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
@@ -24,3 +25,7 @@ Cloud_terraform_task3
 
 ![image](https://github.com/VerySpinelessJunior/Cloud_terraform_task3/assets/98365261/5ec4e87a-abde-4343-9571-d132d5a03976)
 
+8. Копируем nat ip адресс (подсвечен синим и имеет другую подсеть)
+9. С помощью ssh scp и полученного ранее ip адреса передаём баш скрипты, которые развернут систему
+10. Подключаемся к серверам по shh и запускаем скрипты
+11. profit
