@@ -8,7 +8,19 @@ Cloud_terraform_task3
 
 # How to set up
 1. Установить тераформ по гайду из документации https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
-2. Создать папку проета, положить туда файлы main.tf и terraform.tfvars
+2. Создать папку проекта, положить туда файлы main.tf и terraform.tfvars
 3. В файле terraform.tfvars указать в полях access_key и secret_key вашу пару ключей доступа, они получаются из панели вашего пользователя. В поле root_passwd указать желаемый пароль для root пользователя
 
 ![image](https://github.com/VerySpinelessJunior/Cloud_terraform_task3/assets/98365261/d18580f7-5b3b-4b86-8e7d-266bad30ebb4)
+
+4. В папке проекта открыть терминал и проинициалировать провайдера командой terraform init (Для этого понадобиться VPN)
+5. terraform apply в появившемя поле ввода вводим yes
+
+![image](https://github.com/VerySpinelessJunior/Cloud_terraform_task3/assets/98365261/30fb2540-27ae-4ccc-abc3-dd80344ea9dd)
+
+
+6. Дождаться окончания процесса
+7. Зайти в консоль cloud.advance и перейти на страницу Elastic Cloud Service, там будут находиться 2 сервера.
+
+![image](https://github.com/VerySpinelessJunior/Cloud_terraform_task3/assets/98365261/5ec4e87a-abde-4343-9571-d132d5a03976)
+
