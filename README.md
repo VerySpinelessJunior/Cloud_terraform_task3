@@ -31,6 +31,6 @@ https://github.com/VerySpinelessJunior/Cloud_terraform_task3/assets/98365261/543
 ![image](https://github.com/VerySpinelessJunior/Cloud_terraform_task3/assets/98365261/5ec4e87a-abde-4343-9571-d132d5a03976)
 
 8. Копируем nat ip адресс (подсвечен синим и имеет другую подсеть)
-9. С помощью ssh scp и полученного ранее ip адреса передаём баш скрипты на ECS, которые развернут систему (их пока нету, дописываются и полируются к утру будут)
+9. С помощью ssh scp и полученного ранее ip адреса передаём баш скрипты на ECS, которые развернут систему
 10. Подключаемся к серверам по shh и запускаем скрипты
 11. profit
